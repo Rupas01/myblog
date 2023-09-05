@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>My Blog - Home</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Blog</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Latest Posts</h2>
+        <!-- Add your blog posts here -->
+         <!-- Blog Post 1 -->
+   <article class="blog-post">
+    <h3>Blog Post Title 1</h3>
+    <p class="blog-post-meta">Published on September 5, 2023 by John Doe</p>
+    <p>
+        This is the content of Blog Post 1. You can write your blog content here.
+    </p>
+    <a href="full_content_post1.html" class="expand-button">Read More</a>
+</article>
+
+<!-- Blog Post 2 -->
+<article class="blog-post">
+    <h3>Blog Post Title 2</h3>
+    <p class="blog-post-meta">Published on September 6, 2023 by Jane Smith</p>
+    <p>
+        This is the content of Blog Post 2. You can write your blog content here.
+    </p>
+    <a href="full_content_post1.html" class="expand-button">Read More</a>
+</article>
+
+<!-- Add more blog posts as needed -->
+    </main>
+    <footer>
+        <p>&copy; 2023 My Blog</p>
+    </footer>
+
+    <script>
+        // Get all expand buttons
+        const expandButtons = document.querySelectorAll('.expand-button');
+    
+        // Add a click event listener to each button
+        expandButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const content = this.previousElementSibling; // Get the content div
+    
+                // Toggle the visibility of the content
+                if (content.style.display === 'none' || content.style.display === '') {
+                    content.style.display = 'block';
+                    this.textContent = 'Read Less';
+                } else {
+                    content.style.display = 'none';
+                    this.textContent = 'Read More';
+                }
+            });
+        });
+    </script>
+    
+</body>
+</html>
